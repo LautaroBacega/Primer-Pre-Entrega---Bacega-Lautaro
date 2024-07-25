@@ -5,7 +5,7 @@ const userSchema = new Schema({
     last_name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     age: { type: Number, required: true },
-    password: { type: String, require: true },
+    password: { type: String, required: true },
     role: { type: String, enum: ["admin", "user"], default: "user" },
     cart: [{ type: Schema.Types.ObjectId, ref: "Cart"}],
 });

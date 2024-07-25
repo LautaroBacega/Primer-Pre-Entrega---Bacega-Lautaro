@@ -37,7 +37,7 @@ router.get('/login-error', (req, res) => {
 router.post("/register", async (req, res) => {
     const { first_name, last_name, email, age, role, password, cart } = req.body;
 
-    if (!first_name || !last_name || !email || !age || !password || !cart) {
+    if (!first_name || !last_name || !email || !age || !password) {
         return res.status(400).json({ message: "Faltan datos obligatorios" });
     }
 
